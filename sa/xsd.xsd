@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="www.o.com" xmlns:h="www.o.com">
+  <xsd:element name="village" type="xsd:string"/>
+  <xsd:element name="name" type="xsd:string"/>
+  <xsd:element name="study" type="xsd:string"/>
+  <xsd:element name="peoples">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="h:people"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="people">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="h:name"/>
+        <xsd:element ref="h:study"/>
+        <xsd:element ref="h:village"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
